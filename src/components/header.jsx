@@ -21,8 +21,8 @@ const Header = () => {
   return (
     <>
       <header className="flex justify-between">
-        <h1>Devfinder</h1>
-        <label className="uppercase">
+        <h1 className="text-2xl font-semibold">devfinder</h1>
+        <label className="flex items-center gap-4 font-semibold uppercase tracking-wider">
           {darkMode ? "light" : "dark"}
           <button onClick={toggle}>
             <img src={darkMode ? sunIcon : moonIcon} />
