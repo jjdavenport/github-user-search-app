@@ -21,7 +21,7 @@ export default {
         search: "url('./src/assets/icon-search.svg')",
       },
       backgroundSize: {
-        mobile: "90% contain",
+        mobile: "24px",
       },
     },
   },

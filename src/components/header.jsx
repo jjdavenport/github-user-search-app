@@ -22,7 +22,7 @@ const Header = () => {
     <>
       <header className="flex justify-between">
         <h1 className="text-2xl font-semibold">devfinder</h1>
-        <label className="flex items-center gap-4 font-semibold uppercase tracking-wider">
+        <label className="flex items-center gap-4 font-semibold uppercase tracking-widest">
           {darkMode ? "light" : "dark"}
           <button onClick={toggle}>
             <img src={darkMode ? sunIcon : moonIcon} />

@@ -10,6 +10,7 @@ function App() {
 
   useEffect(() => {
     fetchData();
+    setUsername("");
   }, []);
 
   const fetchData = async () => {
@@ -30,10 +31,11 @@ function App() {
 
   return (
     <>
-      <div className="flex h-full min-h-screen flex-col gap-10 p-4 font-custom text-base transition-colors duration-300 ease-in-out dark:bg-black dark:text-white">
+      <div className="flex h-full min-h-screen flex-col gap-10 bg-darkWhite p-6 font-custom text-base text-grayBlue transition-colors duration-300 ease-in-out dark:bg-black dark:text-white">
         <Header />
         <div className="flex flex-col gap-4">
           <Input
+            error={error}
             username={username}
             setUsername={setUsername}
             onSubmit={handleSubmit}
