@@ -18,7 +18,7 @@ export default {
         custom: ["space mono", "sans-serif"],
       },
       backgroundImage: {
-        search: "url('./src/assets/icon-search.svg')",
+        search: "url('../src/assets/icon-search.svg')",
       },
       backgroundSize: {
         mobile: "24px",

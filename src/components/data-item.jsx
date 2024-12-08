@@ -2,7 +2,7 @@ const DataItem = ({ data, svg }) => {
   return (
     <li className="flex items-center gap-3 text-sm">
       <div className="flex w-6 items-start">{svg}</div>
-      {data === null ? (
+      {data === null || data === "https://github.blog" || data === "" ? (
         <span className="text-darkWhite dark:text-grayBlue">Not Available</span>
       ) : typeof data === "string" && data.startsWith("http") ? (
         <a
