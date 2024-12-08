@@ -31,16 +31,18 @@ function App() {
 
   return (
     <>
-      <div className="flex h-full min-h-screen flex-col gap-10 bg-darkWhite p-6 font-custom text-base text-grayBlue transition-colors duration-300 ease-in-out dark:bg-black dark:text-white">
-        <Header />
-        <div className="flex flex-col gap-4">
-          <Input
-            error={error}
-            username={username}
-            setUsername={setUsername}
-            onSubmit={handleSubmit}
-          />
-          <Output data={data} />
+      <div className="flex h-full min-h-screen flex-col bg-darkWhite p-6 font-custom text-base text-grayBlue transition-colors duration-300 ease-in-out md:items-center md:justify-center dark:bg-black dark:text-darkWhite">
+        <div className="flex w-full max-w-screen-sm flex-col gap-10">
+          <Header />
+          <div className="~sm/md:~gap-4/6 flex flex-col">
+            <Input
+              error={error}
+              username={username}
+              setUsername={setUsername}
+              onSubmit={handleSubmit}
+            />
+            <Output data={data} />
+          </div>
         </div>
       </div>
     </>

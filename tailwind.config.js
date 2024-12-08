@@ -1,8 +1,14 @@
+import fluid, { extract, screens } from "fluid-tailwind";
+
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.{html,js,jsx}"],
+  content: {
+    files: ["./src/**/*.{html,js,jsx}"],
+    extract,
+  },
   darkMode: "selector",
   theme: {
+    screens,
     extend: {
       colors: {
         blue: "hsl(212, 100%, 50%)",
@@ -25,5 +31,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [fluid],
 };

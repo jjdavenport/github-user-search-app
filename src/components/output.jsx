@@ -16,38 +16,54 @@ const Output = ({ data }) => {
   if (data)
     return (
       <>
-        <main className="flex flex-col gap-8 rounded-xl bg-white px-5 py-8 dark:bg-lightBlack">
-          <div className="flex items-center gap-3">
+        <main className="flex flex-col gap-8 rounded-xl bg-white shadow-md ~sm/md:~px-5/8 ~sm/md:~py-8/10 dark:bg-lightBlack dark:shadow-none">
+          <div className="flex items-center ~sm/md:~gap-3/6">
             <img
-              className="h-fit w-16 rounded-full object-contain"
+              className="h-fit rounded-full object-contain ~sm/md:~w-14/28"
               src={data.avatar_url}
             />
             <div className="flex flex-col gap-1">
               <div className="flex flex-col">
-                <span className="font-semibold">{data.name}</span>
-                <span className="text-sm text-blue">@{data.login}</span>
+                <span className="font-semibold ~sm/md:~text-base/3xl">
+                  {data.name}
+                </span>
+                <span className="text-blue ~sm/md:~text-sm/base">
+                  @{data.login}
+                </span>
               </div>
-              <span className="text-sm">
+              <span className="~sm/md:~text-sm/base">
                 Joined {formatDate(data.created_at)}
               </span>
             </div>
           </div>
           {data.bio && <p>{data.bio}</p>}
-          <ul className="flex justify-evenly gap-2 rounded-lg bg-darkWhite p-5 dark:bg-black">
-            <li className="flex flex-col items-center gap-2">
-              <span className="text-xs dark:text-darkWhite">Repos</span>
-              <span className="font-semibold">{data.public_repos}</span>
+          <ul className="flex justify-evenly rounded-lg bg-darkWhite py-5 ~sm/md:~gap-2/0 ~sm/md:~px-5/10 dark:bg-black">
+            <li className="flex flex-col items-center ~sm/md:~gap-2/0 md:w-full md:items-start">
+              <span className="~sm/md:~text-xs/base dark:text-darkWhite">
+                Repos
+              </span>
+              <span className="font-semibold ~sm/md:~text-base/2xl">
+                {data.public_repos}
+              </span>
             </li>
-            <li className="flex flex-col items-center gap-2">
-              <span className="text-xs dark:text-darkWhite">Followers</span>
-              <span className="font-semibold">{data.followers}</span>
+            <li className="flex flex-col items-center ~sm/md:~gap-2/0 md:w-full md:items-start">
+              <span className="~sm/md:~text-xs/base dark:text-darkWhite">
+                Followers
+              </span>
+              <span className="font-semibold ~sm/md:~text-base/2xl">
+                {data.followers}
+              </span>
             </li>
-            <li className="flex flex-col items-center gap-2">
-              <span className="text-xs dark:text-darkWhite">Following</span>
-              <span className="font-semibold">{data.following}</span>
+            <li className="flex flex-col items-center ~sm/md:~gap-2/0 md:w-full md:items-start">
+              <span className="~sm/md:~text-xs/base dark:text-darkWhite">
+                Following
+              </span>
+              <span className="font-semibold ~sm/md:~text-base/2xl">
+                {data.following}
+              </span>
             </li>
           </ul>
-          <ul className="flex flex-col gap-4">
+          <ul className="flex flex-col ~sm/md:~gap-4/3 md:grid md:grid-cols-2 md:grid-rows-2">
             <DataItem
               data={data.location}
               svg={
@@ -73,6 +89,7 @@ const Output = ({ data }) => {
               }
             />
             <DataItem
+              className={"md:col-start-2 md:row-start-1"}
               data={data.twitter_username}
               svg={
                 <svg height="18" width="20" xmlns="http://www.w3.org/2000/svg">
