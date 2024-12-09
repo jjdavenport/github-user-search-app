@@ -21,7 +21,7 @@ const Header = () => {
   return (
     <>
       <header className="flex justify-between">
-        <h1 className="text-2xl font-semibold">devfinder</h1>
+        <h1 className="font-semibold ~sm/lg:~text-2xl/3xl">devfinder</h1>
         <label className="flex cursor-pointer items-center gap-4 font-semibold uppercase tracking-widest">
           {darkMode ? "light" : "dark"}
           <button onClick={toggle}>
