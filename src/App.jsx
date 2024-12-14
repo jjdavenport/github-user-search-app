@@ -15,6 +15,7 @@ function App() {
       }
       const result = await response.json();
       setData(result);
+      setUsername("");
     } catch {
       setUsername("Not found!");
     }
@@ -22,6 +23,7 @@ function App() {
 
   useEffect(() => {
     fetchData();
+    setUsername("");
   }, []);
 
   const handleSubmit = (e) => {
